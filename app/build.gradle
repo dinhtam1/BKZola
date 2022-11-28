@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        my_config {
+            storeFile file('C:\\Users\\Tam\\Desktop\\keystore.jks')
+            storePassword '123456'
+            keyAlias 'BKZola'
+            keyPassword '123456'
+        }
+    }
     namespace 'com.example.bkzola'
     compileSdk 32
 
@@ -20,6 +28,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.my_config
         }
     }
     compileOptions {
