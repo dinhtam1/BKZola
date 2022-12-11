@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BKZola</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="chao_ban_quay_tro_lai">Chào bạn quay trở lại</string>
+    <string name="dang_nhap_de_tiep_tuc">Đăng nhập để tiếp tục</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="dang_nhap">Đăng Nhập</string>
+    <string name="mat_khau">Mật khẩu</string>
+    <string name="tai_khoan">Tài khoản</string>
+    <string name="tao_tai_khoan_moi">Tạo tài khoản mới</string>
+    <string name="tai_anh_len">Tải ảnh lên</string>
+    <string name="ho_va_ten">Họ và tên</string>
+    <string name="xac_nhan_mat_khau">Xác nhận mật khẩu</string>
+    <string name="dang_ky">Đăng ký</string>
 </resources>
