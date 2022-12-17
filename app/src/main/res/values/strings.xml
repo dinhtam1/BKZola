@@ -13,4 +13,10 @@
     <string name="ho_va_ten">Họ và tên</string>
     <string name="xac_nhan_mat_khau">Xác nhận mật khẩu</string>
     <string name="dang_ky">Đăng ký</string>
+    <string name="channel_name">Notifycation</string>
+    <string name="channel_description">This is Notifycation</string>
+    <string name="bottom_home">Home</string>
+    <string name="bottom_search">Search</string>
+    <string name="bottom_profile">Profile</string>
+
 </resources>
