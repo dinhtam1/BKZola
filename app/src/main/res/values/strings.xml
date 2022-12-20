@@ -18,5 +18,14 @@
     <string name="bottom_home">Home</string>
     <string name="bottom_search">Search</string>
     <string name="bottom_profile">Profile</string>
+    <string name="xac_minh_otp">Xác Minh OTP</string>
+    <string name="gui_1_ma_otp">Chúng tôi sẽ gửi cho bạn mã OTP trên số điện thoại này</string>
+    <string name="nhap_sdt">Nhập Số Điện Thoại</string>
+    <string name="_84">+84-</string>
+    <string name="_123456789">123456789</string>
+    <string name="nhap_ma_otp">Nhập mã OTP</string>
+    <string name="khong_nhan_duoc_ma_otp">Không nhận được mã OTP?</string>
+    <string name="gui_lai_otp">Gửi lại mã OTP</string>
+    <string name="Xac_minh_otp">XÁC MINH</string>
 
 </resources>
