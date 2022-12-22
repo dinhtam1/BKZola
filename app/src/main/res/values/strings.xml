@@ -28,5 +28,6 @@
     <string name="gui_lai_otp">Gửi lại mã OTP</string>
     <string name="Xac_minh_otp">XÁC MINH</string>
     <string name="email">Email</string>
+    <string name="sign_out">Sign Out</string>
 
 </resources>

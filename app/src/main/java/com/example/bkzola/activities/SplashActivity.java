@@ -22,6 +22,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 nextActivity();
+
             }
         }, 2000);
     }
@@ -29,5 +30,7 @@ public class SplashActivity extends AppCompatActivity {
     private void nextActivity() {
         Intent intent = new Intent(this , SignInActivity.class);
         startActivity(intent);
+        finish();
     }
+
 }
