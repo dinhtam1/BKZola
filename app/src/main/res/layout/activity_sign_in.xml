@@ -35,12 +35,12 @@
             android:textSize="@dimen/_13ssp"/>
 
         <EditText
-            android:id="@+id/inputUsername"
+            android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_40sdp"
             android:background="@drawable/background_input"
-            android:hint="@string/tai_khoan"
+            android:hint="@string/email"
             android:paddingStart="@dimen/_16sdp"
             android:paddingEnd="@dimen/_16sdp"
             android:imeOptions="actionNext"
@@ -74,15 +74,28 @@
             android:textSize="@dimen/_13ssp"
             android:textColor="@color/white"
             app:cornerRadius="@dimen/_8sdp"/>
-        <TextView
-            android:id="@+id/textCreateNewAccount"
+
+        <LinearLayout
+            android:id="@+id/LayoutSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tạo tài khoản mới ?"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:textSize="@dimen/_13ssp"
-            android:textColor="@color/primary_text"
-            android:textStyle="bold"/>
+            android:layout_marginTop="@dimen/_30sdp">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tạo tài khoản mới ?"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+
+
     </LinearLayout>
 
 </ScrollView>

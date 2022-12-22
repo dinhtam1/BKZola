@@ -27,5 +27,6 @@
     <string name="khong_nhan_duoc_ma_otp">Không nhận được mã OTP?</string>
     <string name="gui_lai_otp">Gửi lại mã OTP</string>
     <string name="Xac_minh_otp">XÁC MINH</string>
+    <string name="email">Email</string>
 
 </resources>
