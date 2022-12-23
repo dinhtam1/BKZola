@@ -20,51 +20,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:text="@string/tao_tai_khoan_moi"
             android:textColor="@color/primary"
             android:textStyle="bold"
             android:textSize="20sp"/>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
 
-<!--        <FrameLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/_20sdp"-->
-<!--            >-->
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:background="@drawable/background_image"
+                    android:scaleType="centerCrop"
+                    app:riv_oval="true"/>
 
-<!--        <com.makeramen.roundedimageview.RoundedImageView-->
-<!--            android:id="@+id/imageProfile"-->
-<!--            android:layout_width="@dimen/_80sdp"-->
-<!--            android:layout_height="@dimen/_80sdp"-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/tai_anh_len"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="@dimen/_10ssp"/>
 
-<!--            android:background="@drawable/background_image"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            app:riv_oval="true"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:text="@string/tai_anh_len"-->
-<!--                android:textColor="@color/secondary_text"-->
-<!--                android:textSize="@dimen/_10ssp"/>-->
-
-<!--        </FrameLayout>-->
-
-<!--        <EditText-->
-<!--            android:id="@+id/inputName"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="@dimen/_45sdp"-->
-<!--            android:layout_marginTop="@dimen/_16sdp"-->
-<!--            android:background="@drawable/background_input"-->
-<!--            android:hint="@string/ho_va_ten"-->
-<!--            android:paddingStart="@dimen/_16sdp"-->
-<!--            android:paddingEnd="@dimen/_16sdp"-->
-<!--            android:imeOptions="actionNext"-->
-<!--            android:importantForAutofill="no"-->
-<!--            android:inputType="textPassword"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_13ssp"/>-->
+                </FrameLayout>
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/background_input"
+            android:hint="@string/ho_va_ten"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp"/>
 
         <EditText
             android:id="@+id/inputEmail"
@@ -81,6 +77,21 @@
             android:inputType="textEmailAddress"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"/>
+<!--        <EditText-->
+<!--            android:id="@+id/inputPhoneNumber"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_45sdp"-->
+<!--            android:layout_marginTop="@dimen/_16sdp"-->
+
+<!--            android:background="@drawable/background_input"-->
+<!--            android:hint="@string/so_dien_thoai"-->
+<!--            android:paddingStart="@dimen/_16sdp"-->
+<!--            android:paddingEnd="@dimen/_16sdp"-->
+<!--            android:imeOptions="actionNext"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:inputType="number"-->
+<!--            android:textColor="@color/primary_text"-->
+<!--            android:textSize="@dimen/_13ssp"/>-->
 
         <EditText
             android:id="@+id/inputPassword"
@@ -116,7 +127,7 @@
             android:id="@+id/buttonSignUp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_20sdp"
             android:text="@string/dang_ky"
             android:textStyle="bold"

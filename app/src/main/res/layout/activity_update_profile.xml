@@ -49,8 +49,7 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:textColor="@color/primary_text"
-            android:inputType="none"
-            android:enabled="false"
+            android:inputType="text"
             android:textSize="@dimen/_13ssp"/>
     </LinearLayout>
 
@@ -82,27 +81,20 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:textColor="@color/primary_text"
-            android:inputType="none"
-            android:enabled="false"
+            android:inputType="text"
+
             android:textSize="@dimen/_13ssp"/>
     </LinearLayout>
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_Update"
+        android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:text="@string/sua_thong_tin"
+        android:text="@string/luu_thong_tin"
         android:textStyle="bold"
         android:textSize="@dimen/_13ssp"
         android:textColor="@color/white"
         app:cornerRadius="@dimen/_8sdp"/>
-
-    <Button
-        android:id="@+id/btn_SignOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:background="#000000"
-        android:text="@string/sign_out"/>
 </LinearLayout>

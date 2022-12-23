@@ -15,13 +15,16 @@ import android.widget.Toast;
 import com.example.bkzola.MainActivity;
 import com.example.bkzola.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SignUpActivity extends AppCompatActivity {
     TextView textBackLogin;
-    EditText inputEmail, inputPassword , inputPasswordConfirm;
+    EditText inputEmail, inputPassword , inputPasswordConfirm, inputName;
     Button buttonSignUp;
     ProgressDialog progressDialog;
     @Override
@@ -39,6 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
         textBackLogin = findViewById(R.id.textBackLogin);
         inputEmail = findViewById(R.id.inputEmail);
         inputPassword = findViewById(R.id.inputPassword);
+        inputName = findViewById(R.id.inputName);
         inputPasswordConfirm = findViewById(R.id.inputPasswordConfirm);
         buttonSignUp = findViewById(R.id.buttonSignUp);
 
@@ -61,6 +65,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         String email = inputEmail.getText().toString().trim();
         String password = inputPassword.getText().toString().trim();
+        String name = inputName.getText().toString().trim();
         String passwordConfirm = inputPasswordConfirm.getText().toString().trim();
         if (!password.equals(passwordConfirm)) {
             Toast.makeText(SignUpActivity.this, "Mật khẩu xác nhận không trùng khớp",
@@ -86,7 +91,20 @@ public class SignUpActivity extends AppCompatActivity {
 
                             }
                         }
-                    });
+
+                    })
+                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            UserProfileChangeRequest userProfileChangeRequest = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name)
+                                    .build();
+                            FirebaseUser firebaseUser = authResult.getUser();
+                            firebaseUser.updateProfile(userProfileChangeRequest);
+                        }
+                    });;
+
+
         }
 
     }

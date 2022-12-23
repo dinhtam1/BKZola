@@ -1,4 +1,4 @@
-package com.example.bkzola;
+package com.example.bkzola.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

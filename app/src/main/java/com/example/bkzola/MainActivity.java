@@ -7,7 +7,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.bkzola.fragment.ProfileFragment;
+import com.example.bkzola.adapter.MyViewPagerAdapter;
 import com.example.bkzola.tranformer.ZoomOutPageTransformer;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;

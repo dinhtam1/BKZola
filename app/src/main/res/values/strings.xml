@@ -21,6 +21,7 @@
     <string name="xac_minh_otp">Xác Minh OTP</string>
     <string name="gui_1_ma_otp">Chúng tôi sẽ gửi cho bạn mã OTP trên số điện thoại này</string>
     <string name="nhap_sdt">Nhập Số Điện Thoại</string>
+    <string name="so_dien_thoai">Số Điện Thoại</string>
     <string name="_84">+84-</string>
     <string name="_123456789">123456789</string>
     <string name="nhap_ma_otp">Nhập mã OTP</string>
@@ -29,5 +30,8 @@
     <string name="Xac_minh_otp">XÁC MINH</string>
     <string name="email">Email</string>
     <string name="sign_out">Sign Out</string>
+    <string name="save">Save</string>
+    <string name="sua_thong_tin">Sửa thông tin</string>
+    <string name="luu_thong_tin">Lưu thông tin</string>
 
 </resources>
