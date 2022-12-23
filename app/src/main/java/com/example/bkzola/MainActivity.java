@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.bottom_profile) {
                     view_pager_2.setCurrentItem(2);
 
+
                 }
 
                 return true;

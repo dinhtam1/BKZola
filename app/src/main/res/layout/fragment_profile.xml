@@ -8,12 +8,19 @@
     android:orientation="vertical"
     android:gravity="center">
 
-
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/ic_update_24"
+        android:layout_gravity="top|end"
+        />
 
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp">
+        >
 
 
     </FrameLayout>
@@ -90,8 +97,8 @@
         android:id="@+id/btn_Update"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:text="@string/sua_thong_tin"
         android:textStyle="bold"
         android:textSize="@dimen/_13ssp"
@@ -102,7 +109,9 @@
         android:id="@+id/btn_SignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_1sdp"
         android:background="#000000"
         android:text="@string/sign_out"/>
+
+
 </LinearLayout>

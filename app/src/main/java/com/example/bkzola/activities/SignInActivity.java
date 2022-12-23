@@ -36,6 +36,8 @@ public class SignInActivity extends AppCompatActivity {
 
     }
 
+
+
     private void initUi() {
         LayoutSignUp = findViewById(R.id.LayoutSignUp);
         buttonSignIn = findViewById(R.id.buttonSignIn);

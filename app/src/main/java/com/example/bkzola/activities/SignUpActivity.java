@@ -52,6 +52,13 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void initListener() {
 
+        textBackLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this,SignInActivity.class);
+                startActivity(intent);
+            }
+        });
 
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override

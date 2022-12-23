@@ -33,5 +33,7 @@
     <string name="save">Save</string>
     <string name="sua_thong_tin">Sửa thông tin</string>
     <string name="luu_thong_tin">Lưu thông tin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
