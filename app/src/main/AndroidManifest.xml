@@ -23,6 +23,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".activities.MessageActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.SplashActivity"
             android:exported="true">
             <meta-data
