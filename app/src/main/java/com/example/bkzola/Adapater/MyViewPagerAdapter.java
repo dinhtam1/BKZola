@@ -1,4 +1,4 @@
-package com.example.bkzola.adapter;
+package com.example.bkzola.Adapater;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.bkzola.fragment.HomeFragment;
 import com.example.bkzola.fragment.ProfileFragment;
 import com.example.bkzola.fragment.SearchFragment;
+import com.example.bkzola.fragment.UserFragment;
 
 public class MyViewPagerAdapter extends FragmentStateAdapter {
 
@@ -21,13 +22,13 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0 :
-                return new HomeFragment();
+                return new UserFragment();
             case 1 :
                 return new SearchFragment();
             case 2 :
                 return new ProfileFragment();
             default :
-                return new HomeFragment();
+                return new UserFragment();
 
         }
 

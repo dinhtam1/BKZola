@@ -28,7 +28,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/avatar_default"/>
+        android:src="@drawable/huu"/>
 
     <LinearLayout
         android:layout_marginTop="20dp"
@@ -98,20 +98,22 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
+
         android:text="@string/sua_thong_tin"
         android:textStyle="bold"
         android:textSize="@dimen/_13ssp"
         android:textColor="@color/white"
         app:cornerRadius="@dimen/_8sdp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_SignOut"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_1sdp"
-        android:background="#000000"
-        android:text="@string/sign_out"/>
+        android:layout_height="@dimen/_50sdp"
+        android:text="@string/sign_out"
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        app:cornerRadius="@dimen/_8sdp"/>
 
 
 </LinearLayout>

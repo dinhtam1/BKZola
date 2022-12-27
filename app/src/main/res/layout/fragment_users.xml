@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".fragment.UserFragment">
 
+    <Button
+        android:id="@+id/btn_SignOut"
+        android:layout_margin="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_signout_24"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

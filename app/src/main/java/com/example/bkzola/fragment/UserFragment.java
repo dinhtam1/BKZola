@@ -1,11 +1,15 @@
 package com.example.bkzola.fragment;
 
-import android.app.Fragment;
+import androidx.fragment.app.Fragment;
+
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -15,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bkzola.Adapater.UserAdapter;
 import com.example.bkzola.Model.User;
 import com.example.bkzola.R;
+import com.example.bkzola.activities.SignInActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +34,7 @@ import java.util.List;
 public class UserFragment extends Fragment {
     private RecyclerView recyclerView;
     private UserAdapter userAdapter;
+    Button btn_SignOut;
     private List<User> mUser;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -37,6 +43,14 @@ public class UserFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_users,container,false);
 
         recyclerView = view.findViewById(R.id.recycler_view);
+        btn_SignOut = view.findViewById(R.id.btn_SignOut);
+        btn_SignOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SignInActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mUser = new ArrayList<>();

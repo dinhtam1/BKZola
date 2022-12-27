@@ -64,18 +64,24 @@ public class ProfileFragment extends Fragment {
 
     }
 
+    public void onResume() {
+        super.onResume();
+        // Load lại dữ liệu tại đây
+        showUserInformation();
+    }
+
 
 
     private void nextActivity() {
 
 
         String email = textMail.getText().toString().trim();
-        Detail.email = email;
+//        Detail.email = email;
         String name = textName.getText().toString().trim();
-        Detail.name = name;
+//        Detail.name = name;
         Intent intent = new Intent(getActivity(), UpdateActivity.class);
-//        intent.putExtra("key_email" , email);
-//        intent.putExtra("key_name" , name);
+        intent.putExtra("key_email" , email);
+        intent.putExtra("key_name" , name);
         startActivity(intent);
 
     }
@@ -105,14 +111,14 @@ public class ProfileFragment extends Fragment {
         textMail.setText(email);
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (MY_REQUEST_CODE == requestCode && requestCode == Activity.RESULT_OK) {
-//            textMail.setText(data.getStringExtra("key_email"));
-//            textName.setText(data.getStringExtra("key_name"));
-//        }
-//    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (MY_REQUEST_CODE == requestCode && requestCode == Activity.RESULT_OK) {
+            textMail.setText(data.getStringExtra("key_email"));
+            textName.setText(data.getStringExtra("key_name"));
+        }
+    }
 
 
 }

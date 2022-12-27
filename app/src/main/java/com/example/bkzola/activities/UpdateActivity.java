@@ -47,10 +47,10 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     private void initListener() {
-//        textMail.setText(getIntent().getStringExtra("key_email"));
-        textMail.setText(Detail.email);
-//        textName.setText(getIntent().getStringExtra("key_name"));
-        textName.setText(Detail.name);
+        textMail.setText(getIntent().getStringExtra("key_email"));
+//        textMail.setText(Detail.email);
+        textName.setText(getIntent().getStringExtra("key_name"));
+//        textName.setText(Detail.name);
         btn_Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,14 +91,13 @@ public class UpdateActivity extends AppCompatActivity {
                 });
 
 
-
     }
     public void goToAttract() //Cập nhật email và tên mới trong DETAIL
     {
-        String EmailUpdate = textMail.getText().toString().trim();
-        String NameUpdate = textName.getText().toString().trim();
-        Detail.email = EmailUpdate;
-        Detail.name = NameUpdate;
+//        String EmailUpdate = textMail.getText().toString().trim();
+//        String NameUpdate = textName.getText().toString().trim();
+//        Detail.email = EmailUpdate;
+//        Detail.name = NameUpdate;
 
 
 
