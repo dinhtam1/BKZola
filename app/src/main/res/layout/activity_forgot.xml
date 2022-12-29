@@ -7,7 +7,7 @@
     android:clipToPadding="false"
     android:overScrollMode="never"
     android:padding="@dimen/_24sdp"
-    android:background="#f8f8f8"
+    android:background="#fff"
     android:scrollbars="none"
     tools:context=".activities.SignInActivity">
 
@@ -21,14 +21,14 @@
         <ImageView
             android:layout_width="255dp"
             android:layout_height="294dp"
-            android:background="@drawable/logosignin" />
+            android:background="@drawable/logoforgetpass" />
 
 
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
-
+            android:layout_marginTop="40dp"
             android:background="@drawable/background_input"
             android:hint="@string/email"
             android:paddingStart="@dimen/_16sdp"
@@ -39,27 +39,14 @@
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp"/>
 
-        <EditText
-            android:id="@+id/inputPassword"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:background="@drawable/background_input"
-            android:hint="@string/mat_khau"
-            android:paddingStart="@dimen/_16sdp"
-            android:paddingEnd="@dimen/_16sdp"
-            android:imeOptions="actionNext"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp"/>
+
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSignIn"
+            android:id="@+id/btn_send_email"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:text="@string/dang_nhap"
+            android:text="Tìm lại mật khẩu"
             android:textStyle="bold"
             android:textSize="@dimen/_13ssp"
             android:textColor="@color/white"
@@ -67,30 +54,16 @@
 
 
 
-        <LinearLayout
-            android:id="@+id/LayoutSignUp"
+
+        <TextView
+            android:id="@+id/txt_backLogin"
+            android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Tạo tài khoản mới ?"
-                android:textSize="@dimen/_13ssp"
-                android:textColor="@color/primary_text"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-            <TextView
-                android:id="@+id/txtForgotPassWord"
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quên mật khẩu ?"
-                android:textSize="@dimen/_13ssp"
-                android:textColor="@color/primary_text"
-                android:textStyle="bold"/>
+            android:text="@string/tro_lai_dang_nhap"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"/>
 
 
 

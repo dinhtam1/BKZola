@@ -45,6 +45,7 @@ public class MesssageActivity extends AppCompatActivity {
         edtMessageInput = findViewById(R.id.edtText);
         txtChattingWith = findViewById(R.id.txtChattingWith);
         imgToolbar = findViewById(R.id.img_toolbar);
+
         imgSend = findViewById(R.id.img_Send);
 
 

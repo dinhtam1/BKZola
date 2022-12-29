@@ -1,11 +1,15 @@
 package com.example.bkzola.activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,21 +26,59 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.IOException;
+import java.util.UUID;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SignUpActivity extends AppCompatActivity {
     TextView textBackLogin;
     EditText inputEmail, inputPassword , inputPasswordConfirm, inputName;
     Button buttonSignUp;
+    CircleImageView imageProfile;
     ProgressDialog progressDialog;
+    Uri imagePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        imageProfile = findViewById(R.id.imageProfile);
 
-
-
+        imageProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent photoIntent = new Intent(Intent.ACTION_PICK);
+                photoIntent.setType("image/*");
+                startActivityForResult(photoIntent, 1);
+            }
+        });
         initUi();
         initListener();
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 1 && resultCode == RESULT_OK && data != null ) {
+            imagePath = data.getData();
+            try {
+                getImageInImageView();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    private void getImageInImageView() throws IOException {
+        Bitmap bitmap = null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagePath);
+        } catch (IOException e ){
+            e.printStackTrace();
+        }
+
+        imageProfile.setImageBitmap(bitmap);
     }
 
     private void initUi() {
@@ -65,8 +107,37 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onClickSignUp();
+
+            }
+
+
+        });
+    }
+
+    private void uploadImage() {
+        FirebaseStorage.getInstance().getReference("images/"+UUID.randomUUID().toString()).putFile(imagePath).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                if(task.isSuccessful()) {
+                    task.getResult().getStorage().getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Uri> task) {
+                            if(task.isSuccessful()){
+                                FirebaseDatabase.getInstance().getReference("user/" + FirebaseAuth.getInstance().getCurrentUser().getUid() + "/profilePicture").setValue(task.getResult().toString());
+                            }
+                        }
+
+
+                    });
+
+                } else {
+                    Toast.makeText(SignUpActivity.this , task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+                }
+                progressDialog.dismiss();
             }
         });
+
     }
 
     private void onClickSignUp() {
@@ -89,6 +160,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
                                 FirebaseDatabase.getInstance().getReference("user/"+FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(new User(inputName.getText().toString(),inputEmail.getText().toString(), ""));
+                                uploadImage();
                                 // Sign in success, update UI with the signed-in user's information
                                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                                 startActivity(intent);

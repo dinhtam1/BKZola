@@ -16,15 +16,28 @@
         android:theme="@style/Theme.BKZola"
         tools:targetApi="31">
         <activity
-            android:name=".activities.MesssageActivity"
+            android:name=".activities.ForgotActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activities.SearchActivity"
             android:exported="false"
-
             android:theme="@style/StyleWithoutToolbar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!-- <activity -->
+        <activity
+            android:name=".activities.MesssageActivity"
+            android:exported="false"
+            android:theme="@style/StyleWithoutToolbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity> <!-- <activity -->
         <!-- android:name=".activities.FriendActivity" -->
         <!-- android:exported="false"> -->
         <!-- <meta-data -->

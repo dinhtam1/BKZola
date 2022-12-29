@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     >
 
-                <com.makeramen.roundedimageview.RoundedImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/imageProfile"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
@@ -138,7 +138,7 @@
             android:id="@+id/textBackLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đăng nhập ?"
+            android:text="@string/tro_lai_dang_nhap"
             android:layout_marginTop="@dimen/_10sdp"
             android:textSize="20sp"
             android:textColor="@color/primary_text"

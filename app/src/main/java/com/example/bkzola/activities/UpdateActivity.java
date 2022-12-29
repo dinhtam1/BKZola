@@ -127,6 +127,7 @@ public class UpdateActivity extends AppCompatActivity {
                        public void onComplete(@NonNull Task<Uri> task) {
                            if(task.isSuccessful()){
                                updateProfilePicture(task.getResult().toString());
+
                            }
                        }
 

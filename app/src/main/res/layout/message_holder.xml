@@ -14,7 +14,7 @@
             android:id="@+id/profile_cardview"
             android:layout_marginHorizontal="10dp"
             android:layout_width="35dp"
-            app:cardCornerRadius="35dp"
+            app:cardCornerRadius="20dp"
             android:layout_height="35dp">
 
 

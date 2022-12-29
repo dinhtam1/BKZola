@@ -24,8 +24,7 @@
         android:layout_height="200dp"
 
 
-        android:src="@drawable/avatar_default"
-
+        android:src="#ccc"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -63,7 +62,8 @@
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
             android:textColor="@color/primary_text"
-            android:inputType="text"
+            android:inputType="none"
+            android:enabled="false"
             android:textSize="@dimen/_13ssp"/>
     </LinearLayout>
 
