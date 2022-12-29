@@ -1,9 +1,11 @@
-package com.example.bkzola;
+package com.example.bkzola.firebase;
 
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Build;
+
+import com.example.bkzola.R;
 
 public class MyApplication extends Application {
 

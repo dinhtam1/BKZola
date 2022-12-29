@@ -11,15 +11,11 @@ import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
-import com.example.bkzola.MainActivity;
-import com.example.bkzola.MyApplication;
+import com.example.bkzola.activities.MainActivity;
 import com.example.bkzola.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
-import java.util.Date;
 
 public class MessagingService extends FirebaseMessagingService {
 

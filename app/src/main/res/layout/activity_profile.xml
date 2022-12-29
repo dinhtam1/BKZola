@@ -8,27 +8,21 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <Button
-        android:id="@+id/btn_reload"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="-20dp"
-        android:background="@drawable/ic_update_24"
-        android:layout_gravity="top|end"
-        />
+
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
 
     </FrameLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_avatar"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/huu"/>
+        android:src="@drawable/avatar_default"
+        />
 
     <LinearLayout
         android:layout_marginTop="20dp"
@@ -61,7 +55,6 @@
             android:textSize="@dimen/_13ssp"/>
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -75,8 +68,7 @@
             android:layout_height="wrap_content"
             android:text="Họ và tên :  "
             android:textColor="@color/primary"
-            android:textSize="@dimen/_20ssp"
-            />
+            android:textSize="@dimen/_20ssp" />
 
         <EditText
 
@@ -114,6 +106,4 @@
         android:textSize="@dimen/_13ssp"
         android:textColor="@color/white"
         app:cornerRadius="@dimen/_8sdp"/>
-
-
 </LinearLayout>

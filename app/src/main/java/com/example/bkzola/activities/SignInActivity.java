@@ -9,13 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bkzola.MainActivity;
 import com.example.bkzola.R;
-import com.example.bkzola.databinding.ActivitySignInBinding;
-import com.example.bkzola.databinding.ActivitySignUpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -78,6 +74,7 @@ public class SignInActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                                 Intent intent = new Intent(SignInActivity.this , MainActivity.class);
                                 startActivity(intent);
+                                finish();
 
                         } else {
                             Toast.makeText(SignInActivity.this, "Đăng nhập không thành công",

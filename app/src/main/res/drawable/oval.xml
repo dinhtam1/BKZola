@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- các thuộc tính khác có thể được thêm vào đây, chẳng hạn như màu nền, đường viền, v.v. -->
+</shape>
